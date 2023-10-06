@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+
+}
+.header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: blueviolet;
+    padding: 0 1rem 0 1rem;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.nav-item {
+    margin-left: 1rem;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: blanchedalmond;
+    height: 100vh;
+}
