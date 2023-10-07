@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <title>Chris H. Nguyen</title>
 </head>
 <body>
-    <div class="introduction">
-        <div>
-            Hello, my name is Chris H. Nguyen
+    <div class="introduction wrapper">
+        <div class="typewriter">
+            Hello, I'm 
+            <span class="highlight">Chris H. Nguyen</span>.
         </div>
-
-        <div>
-            I am a Full-Stack Software Engineer
+        <div class="introSub">
+            I am a full-stack web developer.
         </div>
     </div>
     <header class="header">
@@ -35,9 +36,9 @@
             </ul>
         </nav>
     </header>
-    <div class="bio">
-        <h3>ABOUT ME:</h3>
-        <div>
+    <h3 class="title">ABOUT ME:</h3>
+    <div class="biography">
+        <div class="summary">
             <p>Hi, everyone! I'm Chris Nguyen. I'm a Physical Therapist Assistant turned Software Engineer. After working in the healthcare industry for 13+ years, I decided to take a big risk and make the switch into the tech world.</p>
             <p>I completed DigitalCraft's Web Development Program where I learned both front and back-end development. I admit the switch wasn't easy, but seeing all the hardwork at the end is pretty rewarding!</p>
             <p>A few of the technologies I've been working with:
@@ -48,7 +49,7 @@
                     <li>NodeJS</li>
                 </ul>
                 <ul>
-                    <li>ExpressJS</li>
+                    <li>TailwindCSS</li>
                     <li>MongoDB</li>
                     <li>PostgreSQL</li>
                     <li>ReactJS / Redux</li>
@@ -60,25 +61,63 @@
             <img src="/assets/ProfilePic.jpg" class="profilePic" alt="profilePic">
         </div>
     </div>
+    <h3 class="title">PROJECTS:</h3>
     <div class="projects">
-        <h3>PROJECTS:</h3>
         <!--projects-->
-    </div>
-    <div class="contacts">
-        <div>
-            <h3>CONTACT ME:</h3>
+
+        <div class="card">
+            <img src="/assets/PT2Go.png" class="card-img" alt="">
+            <div class="card-body">
+                <h1 class="card-title">PT2Go</h1>
+                <ul class="technologyList">
+                    <li>ReactJS</li>
+                    <li>NodeJS</li>
+                    <li>MongoDB</li>
+                </ul>
+                <p class="card-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum non laboriosam tenetur! Molestiae sapiente ut enim quibusdam asperiores nihil itaque, ex harum soluta, reiciendis illum?</p>
+        
+                <a class="card-btn">GitHub Repo</a>
+            </div>
         </div>
+
+        <div class="card">
+            <img src="/assets/myTravelDaySS.png" class="card-img" alt="">
+            <div class="card-body">
+                <h1 class="card-title">myTravelDay</h1>
+                <ul class="technologyList">
+                    <li>Javascript</li>
+                    <li>NodeJS</li>
+                    <li>PostgreSQL</li>
+                </ul>
+                <p class="card-info">Do you hate forgetting to run certain errands or do you just want to make a list of things to do on a trip? myTravelDay is the perfect app to keep you on top of your game!</p>
+        
+                <a class="card-btn">GitHub Repo</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="/assets/guapnarcSS.png" class="card-img" alt="">
+            <div class="card-body">
+                <h1 class="card-title">GuapNarc</h1>
+                <ul class="technologyList">
+                    <li>Javascript</li>
+                    <li>ReactJS</li>
+                    <li>Redux</li>
+                </ul>
+                <p class="card-info"> If you're looking for an expense tracker, GuapNarc is for you! A simple app utilizing ReactJS and Redux to help manage your budget.</p>
+        
+                <a class="card-btn" href="https://github.com/chrisNGUYENERR/React-Expense-Tracker">GitHub Repo</a>
+            </div>
+        </div>
+
+    </div>
+    <h3 class="title">CONTACT ME:</h3>
+    <div class="contacts">
         <div class="contactMe">
             <form class="contactForm" action="https://formspree.io/f/mgedgwyd" method="POST">
                 <input type="text" name="name" class="name" placeholder="Name" required>
-                <br>
-                <br>
                 <input type="text" name="email" class="email" placeholder="Email" required>
-                <br>
-                <br>
                 <textarea type="text" name="message" class="message" placeholder="Message" required></textarea>
-                <br>
-                <br>
                 <button type="submit" name="formBtn" class="formBtn">Send Message</button>
             </form>
         </div>
