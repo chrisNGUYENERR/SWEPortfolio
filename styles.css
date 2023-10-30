@@ -1,6 +1,11 @@
 body {
     margin: 0;
-    font-family: Roboto;
+    font-family: "Roboto";
+    background-color: rgb(22, 22, 22);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .header {
@@ -13,8 +18,17 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: blueviolet;
+    background-color: rgb(30, 30, 30);
     padding: 0 1rem 0 1rem;
+}
+
+.nav-logo {
+    color: rgb(198, 198, 198);
+    text-decoration: none;
+}
+
+.nav-logo:hover, .nav-link:hover {
+    color: rgb(18, 55, 167);
 }
 
 .nav-menu {
@@ -27,25 +41,32 @@ body {
     margin-left: 1rem;
 }
 
+.nav-link {
+    color: rgb(198, 198, 198);
+    text-decoration: none;
+}
+
 .introduction {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    /* background-color: blanchedalmond; */
     height: 100vh;
+    position: relative;
 }
 
 video {
     position: absolute;
-    top: 0;
-    left: 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
 }
 
-
-
-.highlight {
-    color:rgb(200, 30, 30);
+.greetings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(198, 198, 198);
+    z-index: 1;
 }
 
 .wrapper {
@@ -53,59 +74,112 @@ video {
     place-items: center;
   }
   
-  .typewriter {
-    width: 350px;
-    animation: typing 2.5s steps(27), blink .5s step-end infinite alternate;
+.typewriter {
+    width: 410px;
+    animation: typing 3s steps(30), blink .5s step-end infinite alternate;
+    font-family: "Roboto";
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid;
-    font-size: 30px;
-  }
+    font-size: 35px;
+}
   
-  @keyframes typing {
+@keyframes typing {
     from {
-      width: 0
+        width: 0
     }
-  }
+}
       
-  @keyframes blink {
+@keyframes blink {
     50% {
-      border-color: transparent
+    border-color: transparent
     }
-  }
+}
 
-  .introSub {
+.highlight {
+    color:rgb(18, 55, 167);
+}
+
+.introSub {
+    font-size: 25px;
+}
+
+.enterBtn {
+    display: flex;
+    flex-direction: row;
+    width: 10rem;
+    justify-content: space-between;
+    background-color: transparent;
+    color: rgb(198, 198, 198);
+    border: 2px rgb(198, 198, 198) solid;
     font-size: 20px;
-  }
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.enterBtn:hover {
+    background-color:rgb(18, 55, 167);
+    border-color: rgb(18, 55, 167);
+    transition: 0.5s all;
+}
+
+.enterBtn:hover .material-symbols-outlined {
+    transform: rotate(90deg);
+    transition: 0.5s all;
+}
 
 .title {
     text-align: center;
 }
 
 .biography {
-    background-color: lightblue;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: 1rem;
+    align-items: center;
+    background-color: rgb(22, 22, 22);
+    color: rgb(198, 198, 198);
+}
+
+.aboutMe {
+    font-size: 36px;
+    font-weight: 1000;
+    color: white;
 }
 
 .summary {
-    width: 50%;
+    width: 40%;
+    padding: 1rem;
 }
 
 .profilePic {
     height: 400px;
     border-radius: 50%;
+    margin: 1rem;
 }
 
 .projects {
-    background: #36768c;
-    font-family: 'roboto', sans-serif;
+    background-color: rgb(30, 30, 30);
+    font-family: 'Roboto';
+}
+
+.projectsTitle {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 36px;
+    font-weight: 1000;
+    color: white;
+    padding: 2rem 4rem 2rem 0;
+}
+
+.projectCards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    padding-bottom: 2rem;
 }
 
 .card {
@@ -113,7 +187,7 @@ video {
     height: 500px;
     border-radius: 20px;
     overflow: hidden;
-    border: 5px solid #fff;
+    border: 5px solid rgb(198, 198, 198);
     position: relative;
 }
 
@@ -130,7 +204,7 @@ video {
     top: 0;
     right: -100%;
     position: absolute;
-    background: #1f3d4738;
+    background: #3a3a3ac8;
     backdrop-filter: blur(5px);
     border-radius: 15px;
     color: #fff;
@@ -168,6 +242,7 @@ video {
 .card-btn {
     color: #1f3d47;
     background: #8fabba;
+    text-decoration: none;
     text-align: center;
     padding: 10px 20px;
     border-radius: 5px;
@@ -180,27 +255,42 @@ video {
 }
 
 .card-btn:hover {
-    color: white;
+    color: #fff;
 }
 
 .contacts {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color:#8fabba;
+    background-color: rgb(22, 22, 22);
+}
+
+.contactsTitle {
+    font-size: 36px;
+    font-weight: 1000;
+    color: white;
+    padding: 2rem 0 2rem 4rem;
 }
 
 .contactMe {
+    display: flex;
+    justify-content: center;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 50%;
 }
 
 .name, .email, .message {
     width: 100%;
-    border: 2px solid black;
+    border: 2px solid rgb(198, 198, 198);
     border-radius: 5px;
     line-height: 2rem;
     margin-top: 1rem;
     background-color: transparent;
+    color: rgb(198, 198, 198);
 }
 
 input, textarea {
@@ -208,7 +298,48 @@ input, textarea {
     font-family: Roboto;
 }
 
+input::placeholder {
+    color: rgba(198, 198, 198, 0.578);
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+textarea:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
 .message {
     resize: none;
     height: 150px;
+}
+
+.formBtn {
+    flex-direction: row;
+    width: 10rem;
+    justify-content: space-between;
+    background-color: transparent;
+    color: rgb(198, 198, 198);
+    border: 2px rgb(198, 198, 198) solid;
+    font-size: 15px;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.formBtn:hover {
+    color: rgb(22, 22, 22);
+    background-color:rgb(198, 198, 198);
+    border-color: rgb(198, 198, 198);
+    transition: 0.5s all;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5rem;
+    background-color: rgb(30, 30, 30);
 }
