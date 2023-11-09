@@ -48,31 +48,38 @@
                     <a class="nav-link" href="/assets/ResumeSWE.pdf" target="_blank">Resume</a>
                 </li>
             </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
     </header>
     <div class="biography" id='biography' data-aos="fade-right" data-aos-duration="1000">
-        <div class="summary">
-            <span class="aboutMe" id="aboutMe">AboutMe.</span>
-            <p>Hi, everyone! I'm Chris Nguyen. I'm a Physical Therapist Assistant turned Web Developer. After working in the healthcare industry for 13+ years, I decided to take a big risk and make the switch into the tech world.</p>
-            <p>I completed DigitalCraft's Web Development Program where I learned both front and back-end development. I admit the switch wasn't easy, but seeing all the hardwork at the end is pretty rewarding!</p>
-            <p>A few of the technologies I've been working with:
-                <ul class="techList">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>NodeJS</li>
-                </ul>
-                <ul>
-                    <li>TailwindCSS</li>
-                    <li>MongoDB</li>
-                    <li>PostgreSQL</li>
-                    <li>ReactJS / Redux</li>
-                </ul>
-            </p>
-            <p>And many more to come...</p>
-        </div>
-        <div class="profileImg">
-            <img src="/assets/ProfilePic.jpg" class="profilePic" alt="profilePic">
+        <div class="aboutMeTitle">AboutMe.</div>
+        <div class="bioContent">
+            <div class="summary">
+                <p>Hi, everyone! I'm Chris Nguyen. I'm a Physical Therapist Assistant turned Web Developer. After working in the healthcare industry for 13+ years, I decided to take a big risk and make the switch into the tech world.</p>
+                <p>I completed DigitalCraft's Web Development Program where I learned both front and back-end development. I admit the switch wasn't easy, but seeing all the hardwork at the end is pretty rewarding!</p>
+                <p>A few of the technologies I've been working with:
+                    <ul class="techList">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>NodeJS</li>
+                    </ul>
+                    <ul>
+                        <li>TailwindCSS</li>
+                        <li>MongoDB</li>
+                        <li>PostgreSQL</li>
+                        <li>ReactJS / Redux</li>
+                    </ul>
+                </p>
+                <p>And many more to come...</p>
+            </div>
+            <div class="profileImg">
+                <img src="/assets/ProfilePic.jpg" class="profilePic" alt="profilePic">
+            </div>
         </div>
     </div>
     <div class="projects" id="projects" data-aos="fade-left" data-aos-duration="1000">
@@ -91,21 +98,6 @@
                     <a class="card-btn" href="https://github.com/chrisNGUYENERR/React-PT2Go" target="_blank">GitHub Repo</a>
                 </div>
             </div>
-    
-            <div class="card">
-                <img src="/assets/myTravelDaySS.png" class="card-img" alt="">
-                <div class="card-body">
-                    <h1 class="card-title">myTravelDay</h1>
-                    <p class="card-info">Do you hate forgetting to complete certain errands or do you just want to make a list of things to do on a trip? myTravelDay is the perfect app to keep you on top of your game!</p>
-                    <ul class="technologyList">
-                        <li>Javascript</li>
-                        <li>NodeJS</li>
-                        <li>PostgreSQL</li>
-                    </ul>
-                    <a class="card-btn" href="https://github.com/chrisNGUYENERR/myTravelDay" target="_blank">GitHub Repo</a>
-                </div>
-            </div>
-    
             <div class="card">
                 <img src="/assets/guapnarcSS.png" class="card-img" alt="">
                 <div class="card-body">
@@ -117,6 +109,19 @@
                         <li>Redux</li>
                     </ul>
                     <a class="card-btn" href="https://github.com/chrisNGUYENERR/React-Expense-Tracker" target="_blank">GitHub Repo</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="/assets/myTravelDaySS.png" class="card-img" alt="">
+                <div class="card-body">
+                    <h1 class="card-title">myTravelDay</h1>
+                    <p class="card-info">Do you hate forgetting to complete certain errands or do you just want to make a list of things to do on a trip? myTravelDay is the perfect app to keep you on top of your game!</p>
+                    <ul class="technologyList">
+                        <li>Javascript</li>
+                        <li>NodeJS</li>
+                        <li>PostgreSQL</li>
+                    </ul>
+                    <a class="card-btn" href="https://github.com/chrisNGUYENERR/myTravelDay" target="_blank">GitHub Repo</a>
                 </div>
             </div>
         </div>
@@ -147,6 +152,25 @@
     <script>
         let vid = document.getElementById('background-video');
         vid.playbackRate = 0.8;
+
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        }
+
+        const navLink = document.querySelectorAll(".nav-link");
+
+        navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }
     </script>
      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
      <script>

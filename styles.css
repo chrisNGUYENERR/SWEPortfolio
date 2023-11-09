@@ -46,6 +46,24 @@ html {
     text-decoration: none;
 }
 
+ul {
+    display: inline-block;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(198, 198, 198);
+}
+
 .introduction {
     justify-content: center;
     height: 100vh;
@@ -109,6 +127,7 @@ video {
     flex-direction: row;
     width: 10rem;
     justify-content: space-between;
+    align-items: center;
     background-color: transparent;
     color: rgb(198, 198, 198);
     border: 2px rgb(198, 198, 198) solid;
@@ -130,27 +149,30 @@ video {
     transition: 0.5s all;
 }
 
-.title {
-    text-align: center;
-}
-
 .biography {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
     background-color: rgb(22, 22, 22);
     color: rgb(198, 198, 198);
 }
 
-.aboutMe {
+.aboutMeTitle {
+    display: flex;
+    justify-content: flex-start;
     font-size: 36px;
     font-weight: 1000;
     color: white;
+    padding: 2rem 0 0 4rem;
+}
+
+.bioContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .summary {
     width: 40%;
+    font-size: 18px;
     padding: 1rem;
 }
 
@@ -189,6 +211,7 @@ video {
     overflow: hidden;
     border: 5px solid rgb(198, 198, 198);
     position: relative;
+    margin-bottom: 1rem;
 }
 
 .card-img {
@@ -288,7 +311,7 @@ video {
     border: 2px solid rgb(198, 198, 198);
     border-radius: 5px;
     line-height: 2rem;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     background-color: transparent;
     color: rgb(198, 198, 198);
 }
@@ -322,9 +345,10 @@ textarea:focus::-webkit-input-placeholder {
     background-color: transparent;
     color: rgb(198, 198, 198);
     border: 2px rgb(198, 198, 198) solid;
+    border-radius: 5px;
     font-size: 15px;
     padding: 0.5rem 1rem;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     cursor: pointer;
     text-decoration: none;
 }
@@ -343,3 +367,107 @@ textarea:focus::-webkit-input-placeholder {
     margin-top: 5rem;
     background-color: rgb(30, 30, 30);
 }
+
+
+/* SMARTPHONES PORTRAIT */
+@media only screen and (max-width: 420px) {
+    .typewriter {
+        width: 305px;
+        font-size: 26px;
+    }
+
+    .introSub {
+        font-size: 20px;
+    }
+    
+    .enterBtn {
+        width: 8em;
+        font-size: 15px;
+    }
+
+    .aboutMeTitle, .contactsTitle {
+        padding: 2rem 0 2rem 2rem;
+    }
+
+    .projectsTitle {
+    padding: 2rem 2rem 2rem 0;
+
+    }
+}
+
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (max-width: 540px) {
+
+    .bioContent {
+        flex-direction: column;
+    }
+
+    .summary {
+        width: 80%;
+    }
+
+    .profilePic {
+        height: 200px;
+    }
+
+    .navbar {
+        padding: 1rem;
+    }
+
+    .nav-menu {
+        position: absolute;
+        left: -130%;
+        top: 2.84rem;
+        flex-direction: column;
+        /* backdrop-filter: blur(15px); */
+        background-color: rgb(30, 30, 30);
+        width: 100%;
+        border-radius: 0 0 5px 5px;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-menu.active {
+        border-top: 1px solid white;
+        position: absolute;
+        padding-left: 0;
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 1rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
+
+/* TABLETS PORTRAIT */
+@media only screen and (max-width: 768px) {
+
+    .profilePic {
+        height: 300px;
+    }
+
+}
+
+
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (max-width: 1024px) {
+
+}   
