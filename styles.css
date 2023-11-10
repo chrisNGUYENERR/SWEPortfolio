@@ -168,6 +168,7 @@ video {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    padding-bottom: 2rem;
 }
 
 .summary {
@@ -364,7 +365,7 @@ textarea:focus::-webkit-input-placeholder {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 5rem;
+    margin-top: 3rem;
     background-color: rgb(30, 30, 30);
 }
 
