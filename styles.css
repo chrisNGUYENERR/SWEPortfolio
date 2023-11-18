@@ -318,11 +318,15 @@ video {
 }
 
 input, textarea {
-    padding-left: 1rem;
     font-family: Roboto;
 }
 
 input::placeholder {
+    padding-left: 1rem;
+    color: rgba(198, 198, 198, 0.578);
+}
+textarea::placeholder {
+    padding-left: 1rem;
     color: rgba(198, 198, 198, 0.578);
 }
 
@@ -463,6 +467,10 @@ textarea:focus::-webkit-input-placeholder {
 
     .profilePic {
         height: 300px;
+    }
+
+    .contactForm {
+        width: 75%;
     }
 
 }
